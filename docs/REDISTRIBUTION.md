@@ -1,21 +1,22 @@
-# Redistribution policy
+# 数据再分发策略
 
-Each upstream dataset is evaluated independently. A permissive license on this catalog does not override upstream terms.
+我按数据集逐一判断再分发范围。本项目自身使用的 MIT License 不会覆盖或替代任何上游数据集条款。
 
-| Policy | Meaning |
+| 策略 | 含义 |
 | --- | --- |
-| `full_release` | The selected upstream files are packaged as a separate release asset with attribution and revision metadata. |
-| `conditional_release` | The asset is isolated because its license adds conditions such as non-commercial use and share-alike. |
-| `metadata_release` | Only upstream-authored benchmark metadata/splits are packaged; third-party full text or packages are excluded. |
-| `metadata_only` | No dataset samples are rehosted. The catalog provides source URL, revision, labels, and acquisition notes. |
+| `full_release` | 在独立 Release 中提供所选上游文件，并保留来源、许可证和固定版本。 |
+| `conditional_release` | 单独发布带有额外条件的数据，例如非商业使用和相同方式共享。 |
+| `metadata_release` | 只发布上游基准作者提供的元数据、分类和数据划分，排除第三方全文或 Skill 包。 |
+| `metadata_only` | 不重新托管样本，只提供来源链接、固定版本、标签和获取说明。 |
 
-Before publishing a new snapshot:
+## 我发布新快照时遵循的流程
 
-1. Recheck the current upstream license at the pinned revision.
-2. Identify third-party artifacts whose terms differ from the benchmark's own metadata license.
-3. Package each dataset independently.
-4. Include the upstream URL, revision, license expression, and checksum beside every asset.
-5. Do not silently replace release assets; publish a new snapshot tag.
+1. 在固定上游版本上重新检查许可证。
+2. 识别与基准自身许可证不同的第三方内容。
+3. 每个数据集单独打包，禁止混合许可不同的样本。
+4. 为每个资产记录上游来源、提交版本、许可证、大小和 SHA-256。
+5. 不覆盖已经发布的资产；数据变化时创建新的快照标签。
+6. 重新运行目录校验、归档安全审计和 GitHub 服务端摘要核验。
 
-Removal or correction requests should be handled per dataset without deleting unrelated releases.
+如果收到删除或更正请求，我会按数据集处理，不影响其他来源和 Release。
 

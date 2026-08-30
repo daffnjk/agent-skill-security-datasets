@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the public catalog without loading or executing dataset samples."""
+"""在不加载或执行数据集样本的情况下校验公开目录。"""
 
 from __future__ import annotations
 
@@ -51,7 +51,7 @@ def main() -> None:
     unknown = sorted({row["source_id"] for row in rows} - known)
     assert not unknown, f"label map references unknown datasets: {unknown}"
 
-    print(f"validated {len(datasets)} dataset entries and {len(rows)} label mappings")
+    print(f"校验通过：{len(datasets)} 个数据源，{len(rows)} 条标签映射")
 
 
 if __name__ == "__main__":

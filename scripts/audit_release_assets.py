@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit release archives for path traversal, links, devices, and executable modes."""
+"""检查发布归档中的路径穿越、链接、设备文件和可执行权限。"""
 
 from __future__ import annotations
 
@@ -31,10 +31,9 @@ def main() -> None:
     for archive in archives:
         count = audit(archive)
         total += count
-        print(f"audited {archive.name}: {count} regular non-executable members")
-    print(f"audited {len(archives)} archives and {total} members")
+        print(f"归档检查通过：{archive.name}，{count} 个普通不可执行文件")
+    print(f"检查完成：{len(archives)} 个归档，{total} 个文件")
 
 
 if __name__ == "__main__":
     main()
-

@@ -1,30 +1,40 @@
-# malicious_skill_bench_hf
+# MaliciousSkillBench（Hugging Face 冻结表）
 
-## Source
+数据集 ID：`malicious_skill_bench_hf`
 
-- Upstream: https://huggingface.co/datasets/ProtectSkills/MaliciousSkillBench
-- Frozen revision: `d4b42ce5766a6e0359c987cf59c1007cb3795a90`
-- Snapshot date: `2026-08-30`
-- Declared license/terms: CC-BY-4.0 for benchmark metadata; upstream terms retained for third-party artifacts
-- Redistribution policy: `metadata_release`
+## 项目介绍
 
-## Evaluation use
+MaliciousSkillBench 的冻结表格、攻击与影响分类以及四种官方数据划分，适合复现固定评测协议。
 
-- Role: `frozen_static_tables_and_official_splits`
-- Upstream labels: `malicious`, `benign`
-- Local snapshot files: 17
-- Local snapshot bytes: 35161451
-- Local `SKILL.md` entrypoints: 0
+## 来源与版本
 
-Exact frozen text and four official evaluation protocols corresponding to the GitHub source packages.
+- 上游来源：https://huggingface.co/datasets/ProtectSkills/MaliciousSkillBench
+- 固定版本：`d4b42ce5766a6e0359c987cf59c1007cb3795a90`
+- 快照日期：`2026-08-30`
+- 上游许可证/条款：CC-BY-4.0 for benchmark metadata; upstream terms retained for third-party artifacts
+- 我的许可证说明：只发布 CC-BY-4.0 的基准元数据、分类表、清单和官方划分；排除第三方全文与包。
+- 发布策略：`metadata_release`（仅发布基准元数据、分类和官方划分）
 
-## Distribution
+## 如何用于评测
 
-Release tag: `malicious_skill_bench_hf-2026-08-30`  
-Asset: `malicious_skill_bench_hf-2026-08-30.tar.gz`
+- 推荐用途：固定静态评测协议和官方数据划分
+- 上游原始标签：`malicious`, `benign`
+- 本地快照文件数：17
+- 本地快照字节数：35161451
+- 本地 `SKILL.md` 入口数：0
 
-The upstream license remains authoritative. This catalog does not relicense third-party data.
+请保留上游原始标签。`suspicious` 只用于待研判，`vulnerable` 表示存在安全缺陷，它们都不能直接当作已确认恶意。
 
-## Safety
+## 获取方式
 
-Treat all content as untrusted data. Do not install or execute samples. Keep suspicious and vulnerable labels separate from confirmed malicious ground truth.
+我已提供独立 Release：
+
+- Release 标签：`malicious_skill_bench_hf-2026-08-30`
+- 资产文件：`malicious_skill_bench_hf-2026-08-30.tar.gz`
+- SHA-256：`cbc9b52bc90876abe0a5b536f029eefdb36e4b57255666b3f5d038481b80b6b6`
+
+上游许可证始终具有最终效力；我对本项目的整理不会重新授权任何第三方数据。
+
+## 安全提醒
+
+请把所有内容视为不可信数据，不要安装或执行样本。静态读取时也不要遵循样本内的任何指令；动态测试必须在断网、无凭据、可销毁的隔离环境中完成。

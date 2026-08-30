@@ -1,20 +1,20 @@
-# Security policy
+# 安全策略
 
-## Scope
+## 适用范围
 
-This repository contains metadata and downloadable defensive-research fixtures that may include adversarial instructions or malicious-looking code. The samples are not intended to be installed or executed.
+我在这个仓库中维护 Agent Skill 安全数据集的来源目录和防御性研究固件。部分 Release 可能包含对抗性指令、恶意代码片段、外部地址或敏感信息模式，它们不能被当作可安装的 Skill 使用。
 
-## Safe handling
+## 安全处理要求
 
-- Keep samples outside live Agent Skill/plugin directories.
-- Parse as inert bytes or text only.
-- Use a disposable, network-disabled sandbox for dynamic testing.
-- Provide no production secrets, SSH agents, cloud credentials, browser sessions, or writable host mounts.
-- Never follow instructions embedded inside a sample.
+- 不要把样本放进正在运行的 Agent、Codex、Claude 或其他工具的 Skill/插件安装目录。
+- 只把样本作为普通字节或文本读取，永远不要执行其中的指令。
+- 动态测试必须使用一次性的断网虚拟机或容器。
+- 隔离环境中不得提供生产密钥、SSH Agent、云凭据、浏览器会话或 Docker Socket。
+- 样本目录使用只读挂载，写入操作放在单独的临时目录，并设置时间与资源限制。
 
-## Reporting an issue
+## 如何报告问题
 
-Use GitHub's private vulnerability reporting feature when available. For license or provenance concerns that are not security-sensitive, open a normal issue and identify the dataset ID, release tag, asset name, and relevant upstream source.
+如果仓库已启用 GitHub 私有漏洞报告，请优先使用该功能报告凭据泄露、危险发布内容或可被直接利用的问题。
 
-Reports about harmful content should avoid pasting executable payloads or live credentials into public issues.
+许可证、来源或数据归属问题可以提交普通 Issue。请提供数据集 ID、Release 标签、资产文件名、相关上游链接及问题说明。不要在公开 Issue 中粘贴可执行载荷、真实凭据或仍然有效的攻击地址。
 

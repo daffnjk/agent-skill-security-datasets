@@ -2,12 +2,14 @@
   "schema_version": "1.0",
   "snapshot_date": "2026-08-30",
   "repository": "https://github.com/daffnjk/agent-skill-security-datasets",
-  "scope": "Publicly downloadable datasets directly relevant to malicious, suspicious, vulnerable, harmful, or runtime-adversarial Agent Skills",
-  "safety": "Defensive research only; treat every sample as untrusted data and never execute it on a host system.",
+  "scope": "公开可下载且与恶意、可疑、脆弱、有害或运行时对抗性 Agent Skill 直接相关的数据集",
+  "maintainer_note": "我整理这个目录是为了让恶意 Skill 检测评测更易复现；我不拥有或重新授权任何第三方数据。",
+  "safety": "仅用于防御性研究。请把每个样本视为不可信数据，禁止在宿主系统或真实 Agent 环境中安装或执行。",
   "datasets": [
     {
       "id": "malicious_skill_bench",
-      "title": "malicious_skill_bench",
+      "title": "MaliciousSkillBench（GitHub 源）",
+      "description": "面向 Agent Skill 静态恶意检测的综合基准，包含恶意与良性身份、攻击分类、元数据及第三方来源包，适合主检测能力和误报率评测。",
       "source": {
         "kind": "github",
         "url": "https://github.com/ProtectSkills/MaliciousSkillBench"
@@ -15,25 +17,29 @@
       "upstream_revision": "893afd609be22a2dfac5a2b94bbebb4eeb99515e",
       "snapshot_date": "2026-08-30",
       "license": "CC-BY-4.0 for benchmark metadata; upstream terms retained for third-party artifacts",
+      "license_note": "基准元数据采用 CC-BY-4.0；第三方包继续适用各自上游条款。",
       "labels": [
         "malicious",
         "benign"
       ],
       "evaluation_role": "primary_static_and_package_benchmark",
+      "evaluation_role_zh": "静态检测、包级检测和良性误报对照",
       "redistribution": "metadata_only",
+      "redistribution_zh": "仅提供来源索引，不重新托管样本",
       "local_snapshot_counts": {
         "files": 34082,
         "bytes": 345281849,
         "skill_entrypoints": 7526,
         "archives": 16
       },
-      "notes": "9,740 identities; 7,505 malicious and 2,235 benign. Source packages are included in the GitHub repository.",
+      "notes": "面向 Agent Skill 静态恶意检测的综合基准，包含恶意与良性身份、攻击分类、元数据及第三方来源包，适合主检测能力和误报率评测。",
       "card": "datasets/malicious_skill_bench/DATASET_CARD.md",
       "release": null
     },
     {
       "id": "malicious_skill_bench_hf",
-      "title": "malicious_skill_bench_hf",
+      "title": "MaliciousSkillBench（Hugging Face 冻结表）",
+      "description": "MaliciousSkillBench 的冻结表格、攻击与影响分类以及四种官方数据划分，适合复现固定评测协议。",
       "source": {
         "kind": "huggingface_files",
         "url": "https://huggingface.co/datasets/ProtectSkills/MaliciousSkillBench"
@@ -41,19 +47,22 @@
       "upstream_revision": "d4b42ce5766a6e0359c987cf59c1007cb3795a90",
       "snapshot_date": "2026-08-30",
       "license": "CC-BY-4.0 for benchmark metadata; upstream terms retained for third-party artifacts",
+      "license_note": "只发布 CC-BY-4.0 的基准元数据、分类表、清单和官方划分；排除第三方全文与包。",
       "labels": [
         "malicious",
         "benign"
       ],
       "evaluation_role": "frozen_static_tables_and_official_splits",
+      "evaluation_role_zh": "固定静态评测协议和官方数据划分",
       "redistribution": "metadata_release",
+      "redistribution_zh": "仅发布基准元数据、分类和官方划分",
       "local_snapshot_counts": {
         "files": 17,
         "bytes": 35161451,
         "skill_entrypoints": 0,
         "archives": 0
       },
-      "notes": "Exact frozen text and four official evaluation protocols corresponding to the GitHub source packages.",
+      "notes": "MaliciousSkillBench 的冻结表格、攻击与影响分类以及四种官方数据划分，适合复现固定评测协议。",
       "card": "datasets/malicious_skill_bench_hf/DATASET_CARD.md",
       "release": {
         "tag": "malicious_skill_bench_hf-2026-08-30",
@@ -64,7 +73,8 @@
     },
     {
       "id": "malskillbench",
-      "title": "malskillbench",
+      "title": "MalSkillBench",
+      "description": "完整 Skill 包级恶意检测基准，覆盖生成样本、真实来源样本和检测器测试子集，适合目录级或多文件扫描测试。",
       "source": {
         "kind": "github",
         "url": "https://github.com/lxyeternal/MalSkillBench"
@@ -72,25 +82,29 @@
       "upstream_revision": "06e083125d5ec5dd7a189dfedadfe587a70635b9",
       "snapshot_date": "2026-08-30",
       "license": "see upstream repository",
+      "license_note": "固定版本上未发现仓库级通用 LICENSE，因此本项目不重新托管样本。",
       "labels": [
         "malicious",
         "benign"
       ],
       "evaluation_role": "full_package_benchmark",
+      "evaluation_role_zh": "完整 Skill 包检测和良性误报对照",
       "redistribution": "metadata_only",
+      "redistribution_zh": "仅提供来源索引，不重新托管样本",
       "local_snapshot_counts": {
         "files": 410124,
         "bytes": 5608669262,
         "skill_entrypoints": 8018,
         "archives": 3
       },
-      "notes": "3,944 malicious packages and 4,000 benign controls; generated, wild, and detector-test subsets.",
+      "notes": "完整 Skill 包级恶意检测基准，覆盖生成样本、真实来源样本和检测器测试子集，适合目录级或多文件扫描测试。",
       "card": "datasets/malskillbench/DATASET_CARD.md",
       "release": null
     },
     {
       "id": "malicious_agent_skills_bench",
-      "title": "malicious_agent_skills_bench",
+      "title": "MaliciousAgentSkillsBench",
+      "description": "大规模生态标签与真实世界验证数据，区分安全、可疑和经过行为确认的恶意 Skill，适合测试召回率、误报率和分级能力。",
       "source": {
         "kind": "github",
         "url": "https://github.com/protectskills/MaliciousAgentSkillsBench"
@@ -98,20 +112,23 @@
       "upstream_revision": "f7d28b1a9de4eb33d552529cf79d1065d765f6c3",
       "snapshot_date": "2026-08-30",
       "license": "MIT",
+      "license_note": "MIT，按上游条款提供独立完整 Release。",
       "labels": [
         "safe",
         "suspicious",
         "malicious"
       ],
       "evaluation_role": "ecosystem_labels_and_verified_wild",
+      "evaluation_role_zh": "生态标签、真实恶意确认和可疑样本分级",
       "redistribution": "full_release",
+      "redistribution_zh": "完整 Release",
       "local_snapshot_counts": {
         "files": 116,
         "bytes": 11884269,
         "skill_entrypoints": 1,
         "archives": 0
       },
-      "notes": "98,380 labeled identities including 157 behaviorally confirmed malicious skills.",
+      "notes": "大规模生态标签与真实世界验证数据，区分安全、可疑和经过行为确认的恶意 Skill，适合测试召回率、误报率和分级能力。",
       "card": "datasets/malicious_agent_skills_bench/DATASET_CARD.md",
       "release": {
         "tag": "malicious_agent_skills_bench-2026-08-30",
@@ -122,7 +139,8 @@
     },
     {
       "id": "overtly_malicious_skills",
-      "title": "overtly_malicious_skills",
+      "title": "Overtly Malicious Skills",
+      "description": "Trail of Bits 提供的少量、刻意设计为恶意的多文件 Skill 固件，可用于检测明显恶意行为及扫描规避表现。",
       "source": {
         "kind": "github",
         "url": "https://github.com/trailofbits/overtly-malicious-skills"
@@ -130,24 +148,28 @@
       "upstream_revision": "4ffbf9461ef0505f9ce76a0d3694a18ec33ea531",
       "snapshot_date": "2026-08-30",
       "license": "repository has no general license; research fixtures retained under upstream terms",
+      "license_note": "固定版本上未提供通用 LICENSE，因此本项目只保留索引。",
       "labels": [
         "malicious"
       ],
       "evaluation_role": "scanner_evasion_fixtures",
+      "evaluation_role_zh": "明显恶意行为和扫描规避固件",
       "redistribution": "metadata_only",
+      "redistribution_zh": "仅提供来源索引，不重新托管样本",
       "local_snapshot_counts": {
         "files": 14,
         "bytes": 770079,
         "skill_entrypoints": 4,
         "archives": 0
       },
-      "notes": "Four deliberately malicious multi-file skills from Trail of Bits.",
+      "notes": "Trail of Bits 提供的少量、刻意设计为恶意的多文件 Skill 固件，可用于检测明显恶意行为及扫描规避表现。",
       "card": "datasets/overtly_malicious_skills/DATASET_CARD.md",
       "release": null
     },
     {
       "id": "agenttrap",
-      "title": "agenttrap",
+      "title": "AgentTrap",
+      "description": "运行时 Agent 安全基准，使用惰性域名和模拟数据接收端构造恶意及良性任务，适合隔离沙箱中的动态检测评测。",
       "source": {
         "kind": "github",
         "url": "https://github.com/zhmzm/AgentTrap"
@@ -155,25 +177,29 @@
       "upstream_revision": "613c37512d16a92731d6f145f67f735f1ced9d20",
       "snapshot_date": "2026-08-30",
       "license": "see upstream repository",
+      "license_note": "固定版本上未发现仓库级通用 LICENSE，因此本项目不重新托管样本。",
       "labels": [
         "malicious",
         "benign"
       ],
       "evaluation_role": "runtime_benchmark",
+      "evaluation_role_zh": "运行时攻击检测和动态误报对照",
       "redistribution": "metadata_only",
+      "redistribution_zh": "仅提供来源索引，不重新托管样本",
       "local_snapshot_counts": {
         "files": 1900,
         "bytes": 22702003,
         "skill_entrypoints": 141,
         "archives": 5
       },
-      "notes": "141 tasks: 91 malicious and 50 benign; inert domains and mock sinks.",
+      "notes": "运行时 Agent 安全基准，使用惰性域名和模拟数据接收端构造恶意及良性任务，适合隔离沙箱中的动态检测评测。",
       "card": "datasets/agenttrap/DATASET_CARD.md",
       "release": null
     },
     {
       "id": "skilltrustbench",
-      "title": "skilltrustbench",
+      "title": "SkillTrustBench",
+      "description": "多文件 Skill 静态安全基准，提供恶意、可疑和正常三类样本及完整归档，适合分级检测与多文件分析。",
       "source": {
         "kind": "huggingface_files",
         "url": "https://huggingface.co/datasets/cuhk-zhuque/SkillTrustBench"
@@ -181,20 +207,23 @@
       "upstream_revision": "f90517b7058fdcfea89af114c069fbf973f42bc7",
       "snapshot_date": "2026-08-30",
       "license": "CC-BY-NC-SA-4.0",
+      "license_note": "CC-BY-NC-SA-4.0；非商业、署名和相同方式共享条件继续适用。",
       "labels": [
         "malicious",
         "suspicious",
         "normal"
       ],
       "evaluation_role": "multi_file_static_benchmark",
+      "evaluation_role_zh": "多文件静态检测和恶意/可疑/正常分级",
       "redistribution": "conditional_release",
+      "redistribution_zh": "带许可证附加条件的独立 Release",
       "local_snapshot_counts": {
         "files": 37727,
         "bytes": 341119821,
         "skill_entrypoints": 5595,
         "archives": 1
       },
-      "notes": "5,520 cases and a full 80 MB archive; the fetch pipeline also creates a safely unpacked, non-executable directory tree.",
+      "notes": "多文件 Skill 静态安全基准，提供恶意、可疑和正常三类样本及完整归档，适合分级检测与多文件分析。",
       "card": "datasets/skilltrustbench/DATASET_CARD.md",
       "release": {
         "tag": "skilltrustbench-2026-08-30",
@@ -205,7 +234,8 @@
     },
     {
       "id": "skillbench_1650",
-      "title": "skillbench_1650",
+      "title": "SkillsBench-1650",
+      "description": "带脚本内容和难度标签的风险评分数据集，包含合成恶意样本及较大规模良性对照，适合分数校准和难例评测。",
       "source": {
         "kind": "huggingface_files",
         "url": "https://huggingface.co/datasets/zenith6888/SkillsBench-1650"
@@ -213,19 +243,22 @@
       "upstream_revision": "68c0d4bf857f48e5fa4f3baa4613f0c0980a7fb2",
       "snapshot_date": "2026-08-30",
       "license": "CC-BY-4.0",
+      "license_note": "CC-BY-4.0，按上游条款提供独立完整 Release。",
       "labels": [
         "malicious",
         "benign"
       ],
       "evaluation_role": "risk_scoring_and_hardness_benchmark",
+      "evaluation_role_zh": "风险评分、难度分层和良性误报对照",
       "redistribution": "full_release",
+      "redistribution_zh": "完整 Release",
       "local_snapshot_counts": {
         "files": 3,
         "bytes": 11755849,
         "skill_entrypoints": 0,
         "archives": 0
       },
-      "notes": "1,500 benign and 150 synthetic malicious samples with script content and difficulty labels.",
+      "notes": "带脚本内容和难度标签的风险评分数据集，包含合成恶意样本及较大规模良性对照，适合分数校准和难例评测。",
       "card": "datasets/skillbench_1650/DATASET_CARD.md",
       "release": {
         "tag": "skillbench_1650-2026-08-30",
@@ -236,7 +269,8 @@
     },
     {
       "id": "agent_skill_malware",
-      "title": "agent_skill_malware",
+      "title": "Agent Skill Malware",
+      "description": "来自真实恶意活动和良性对照的去重 SKILL.md 文本，规模小但接近实际攻击，可用于二分类回归测试。",
       "source": {
         "kind": "huggingface_files",
         "url": "https://huggingface.co/datasets/yoonholee/agent-skill-malware"
@@ -244,19 +278,22 @@
       "upstream_revision": "5cff435ddab2cc34261875885de9ac50d40393ec",
       "snapshot_date": "2026-08-30",
       "license": "MIT",
+      "license_note": "MIT，按上游条款提供独立完整 Release。",
       "labels": [
         "malicious",
         "benign"
       ],
       "evaluation_role": "real_campaign_binary_classification",
+      "evaluation_role_zh": "真实恶意活动二分类和回归测试",
       "redistribution": "full_release",
+      "redistribution_zh": "完整 Release",
       "local_snapshot_counts": {
         "files": 2,
         "bytes": 2389838,
         "skill_entrypoints": 0,
         "archives": 0
       },
-      "notes": "347 deduplicated OpenClaw SKILL.md texts from malware campaigns and benign controls.",
+      "notes": "来自真实恶意活动和良性对照的去重 SKILL.md 文本，规模小但接近实际攻击，可用于二分类回归测试。",
       "card": "datasets/agent_skill_malware/DATASET_CARD.md",
       "release": {
         "tag": "agent_skill_malware-2026-08-30",
@@ -267,7 +304,8 @@
     },
     {
       "id": "atr_skill_benchmark",
-      "title": "atr_skill_benchmark",
+      "title": "ATR Skill Benchmark",
+      "description": "强调检测精度和困难负样本的基准，恶意样本较少、良性对照较多，适合检查规则过度匹配和误报。",
       "source": {
         "kind": "huggingface_files",
         "url": "https://huggingface.co/datasets/Agent-Threat-Rule/atr-skill-benchmark"
@@ -275,19 +313,22 @@
       "upstream_revision": "7219b10d2ac077e3db8c87d43d653a67935cdb5d",
       "snapshot_date": "2026-08-30",
       "license": "MIT",
+      "license_note": "MIT，按上游条款提供独立完整 Release。",
       "labels": [
         "malicious",
         "benign"
       ],
       "evaluation_role": "precision_oriented_hard_negatives",
+      "evaluation_role_zh": "高精度检测和困难负样本误报测试",
       "redistribution": "full_release",
+      "redistribution_zh": "完整 Release",
       "local_snapshot_counts": {
         "files": 2,
         "bytes": 3872580,
         "skill_entrypoints": 0,
         "archives": 0
       },
-      "notes": "498 samples: 32 malicious and 466 benign, including evasive hard negatives.",
+      "notes": "强调检测精度和困难负样本的基准，恶意样本较少、良性对照较多，适合检查规则过度匹配和误报。",
       "card": "datasets/atr_skill_benchmark/DATASET_CARD.md",
       "release": {
         "tag": "atr_skill_benchmark-2026-08-30",
@@ -298,7 +339,8 @@
     },
     {
       "id": "skillguard_v2",
-      "title": "skillguard_v2",
+      "title": "SkillGuard v2 Dataset",
+      "description": "Skill 形态与通用提示词注入训练辅助数据，适合补充提示词攻击覆盖，不应直接等同于恶意 Skill 包真值。",
       "source": {
         "kind": "huggingface_files",
         "url": "https://huggingface.co/datasets/ZAHRA585/skillguard-v2-dataset"
@@ -306,19 +348,22 @@
       "upstream_revision": "da925f6977ae4201906b441b75f9e5a0194acd76",
       "snapshot_date": "2026-08-30",
       "license": "Apache-2.0",
+      "license_note": "Apache-2.0，按上游条款提供独立完整 Release。",
       "labels": [
         "attack",
         "benign"
       ],
       "evaluation_role": "prompt_injection_training_adjacent",
+      "evaluation_role_zh": "提示词注入辅助训练与检测覆盖",
       "redistribution": "full_release",
+      "redistribution_zh": "完整 Release",
       "local_snapshot_counts": {
         "files": 6,
         "bytes": 72384156,
         "skill_entrypoints": 0,
         "archives": 0
       },
-      "notes": "Skill-shaped and general prompt-injection text; keep separate from ground-truth malicious package evaluation.",
+      "notes": "Skill 形态与通用提示词注入训练辅助数据，适合补充提示词攻击覆盖，不应直接等同于恶意 Skill 包真值。",
       "card": "datasets/skillguard_v2/DATASET_CARD.md",
       "release": {
         "tag": "skillguard_v2-2026-08-30",
@@ -329,7 +374,8 @@
     },
     {
       "id": "skillleakbench",
-      "title": "skillleakbench",
+      "title": "SkillLeakBench",
+      "description": "Agent Skill 凭据泄露和不安全实现问题的去标识化元数据，适合检测硬编码凭据、隐私泄露和修复覆盖。",
       "source": {
         "kind": "huggingface_files",
         "url": "https://huggingface.co/datasets/AgentSkillPrivacy/SkillLeakBench"
@@ -337,19 +383,22 @@
       "upstream_revision": "8264436a0483e2fc1aed84b80e5fde73ea52c3ca",
       "snapshot_date": "2026-08-30",
       "license": "MIT",
+      "license_note": "MIT，按上游条款提供独立完整 Release；内容主要是元数据而非 Skill 全文。",
       "labels": [
         "vulnerable",
         "malicious"
       ],
       "evaluation_role": "credential_leakage_metadata",
+      "evaluation_role_zh": "凭据泄露、脆弱实现和修复覆盖",
       "redistribution": "full_release",
+      "redistribution_zh": "完整 Release",
       "local_snapshot_counts": {
         "files": 5,
         "bytes": 184019,
         "skill_entrypoints": 0,
         "archives": 0
       },
-      "notes": "520 affected skills and 1,708 issues; de-identified metadata, not full Skill text.",
+      "notes": "Agent Skill 凭据泄露和不安全实现问题的去标识化元数据，适合检测硬编码凭据、隐私泄露和修复覆盖。",
       "card": "datasets/skillleakbench/DATASET_CARD.md",
       "release": {
         "tag": "skillleakbench-2026-08-30",
@@ -360,7 +409,8 @@
     },
     {
       "id": "skilllifebench",
-      "title": "skilllifebench",
+      "title": "SkillLifeBench",
+      "description": "覆盖 Skill 生命周期、结构化注册信息、注释、模式和漏洞场景的基准，适合规则覆盖率与生命周期安全测试。",
       "source": {
         "kind": "huggingface_git",
         "url": "https://huggingface.co/datasets/SkillLifeBench2026/SkillLifeBench"
@@ -368,18 +418,21 @@
       "upstream_revision": "55fcf409d643d2740206ce4699b9a81730bce1ad",
       "snapshot_date": "2026-08-30",
       "license": "CC-BY-4.0",
+      "license_note": "CC-BY-4.0，按上游条款提供独立完整 Release。",
       "labels": [
         "vulnerability_scenario"
       ],
       "evaluation_role": "lifecycle_and_vulnerability_scenarios",
+      "evaluation_role_zh": "生命周期漏洞场景和规则覆盖率",
       "redistribution": "full_release",
+      "redistribution_zh": "完整 Release",
       "local_snapshot_counts": {
         "files": 324,
         "bytes": 1731026,
         "skill_entrypoints": 0,
         "archives": 0
       },
-      "notes": "Structured registry, annotations, skill schemas, and implementations; useful for rule coverage rather than prevalence.",
+      "notes": "覆盖 Skill 生命周期、结构化注册信息、注释、模式和漏洞场景的基准，适合规则覆盖率与生命周期安全测试。",
       "card": "datasets/skilllifebench/DATASET_CARD.md",
       "release": {
         "tag": "skilllifebench-2026-08-30",
@@ -392,15 +445,15 @@
   "excluded_or_deferred": [
     {
       "id": "harmfulskillbench",
-      "reason": "Dataset is gated on Hugging Face; code repository is public but samples require user acceptance/token."
+      "reason": "Hugging Face 数据集需要先接受访问条件并使用令牌，因此当前仅延后收录。"
     },
     {
       "id": "skillsmetric",
-      "reason": "Paper describes 2,266 samples, but no verified public dataset repository was found in the dated search."
+      "reason": "论文描述了 2,266 个样本，但在本次快照检索中未找到可验证的公开数据仓库。"
     },
     {
       "id": "duplicate_agent_skill_malware_mirrors",
-      "reason": "Hugging Face mirrors such as TongxiQu/agent-skill-malware appear to duplicate the same 347-sample corpus."
+      "reason": "若干 Hugging Face 镜像看起来与同一份 347 条样本语料重复，因此未重复收录。"
     }
   ]
 }

@@ -1,30 +1,40 @@
-# skillbench_1650
+# SkillsBench-1650
 
-## Source
+数据集 ID：`skillbench_1650`
 
-- Upstream: https://huggingface.co/datasets/zenith6888/SkillsBench-1650
-- Frozen revision: `68c0d4bf857f48e5fa4f3baa4613f0c0980a7fb2`
-- Snapshot date: `2026-08-30`
-- Declared license/terms: CC-BY-4.0
-- Redistribution policy: `full_release`
+## 项目介绍
 
-## Evaluation use
+带脚本内容和难度标签的风险评分数据集，包含合成恶意样本及较大规模良性对照，适合分数校准和难例评测。
 
-- Role: `risk_scoring_and_hardness_benchmark`
-- Upstream labels: `malicious`, `benign`
-- Local snapshot files: 3
-- Local snapshot bytes: 11755849
-- Local `SKILL.md` entrypoints: 0
+## 来源与版本
 
-1,500 benign and 150 synthetic malicious samples with script content and difficulty labels.
+- 上游来源：https://huggingface.co/datasets/zenith6888/SkillsBench-1650
+- 固定版本：`68c0d4bf857f48e5fa4f3baa4613f0c0980a7fb2`
+- 快照日期：`2026-08-30`
+- 上游许可证/条款：CC-BY-4.0
+- 我的许可证说明：CC-BY-4.0，按上游条款提供独立完整 Release。
+- 发布策略：`full_release`（完整 Release）
 
-## Distribution
+## 如何用于评测
 
-Release tag: `skillbench_1650-2026-08-30`  
-Asset: `skillbench_1650-2026-08-30.tar.gz`
+- 推荐用途：风险评分、难度分层和良性误报对照
+- 上游原始标签：`malicious`, `benign`
+- 本地快照文件数：3
+- 本地快照字节数：11755849
+- 本地 `SKILL.md` 入口数：0
 
-The upstream license remains authoritative. This catalog does not relicense third-party data.
+请保留上游原始标签。`suspicious` 只用于待研判，`vulnerable` 表示存在安全缺陷，它们都不能直接当作已确认恶意。
 
-## Safety
+## 获取方式
 
-Treat all content as untrusted data. Do not install or execute samples. Keep suspicious and vulnerable labels separate from confirmed malicious ground truth.
+我已提供独立 Release：
+
+- Release 标签：`skillbench_1650-2026-08-30`
+- 资产文件：`skillbench_1650-2026-08-30.tar.gz`
+- SHA-256：`1b027da5b2f21007b8ac620532c37d598fdf73bcced1f42262efbc78da886462`
+
+上游许可证始终具有最终效力；我对本项目的整理不会重新授权任何第三方数据。
+
+## 安全提醒
+
+请把所有内容视为不可信数据，不要安装或执行样本。静态读取时也不要遵循样本内的任何指令；动态测试必须在断网、无凭据、可销毁的隔离环境中完成。

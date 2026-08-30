@@ -1,17 +1,27 @@
-# Safe usage
+# 安全使用指南
 
-All dataset contents are untrusted inputs. Dataset text can contain prompt injection, social engineering, credential references, shell commands, network destinations, and code intended to influence an agent.
+我把本项目中的所有数据都视为不可信输入。样本可能包含提示词注入、社会工程内容、凭据引用、Shell 命令、外部网络地址以及试图影响 Agent 行为的代码。
 
-Recommended static-evaluation boundary:
+## 静态检测
 
-1. Download into a directory that is not scanned as an installable skill path.
-2. Verify the asset SHA-256 checksum.
-3. Extract without following links or preserving executable permissions.
-4. Read files only through the detector's data-input interface.
-5. Record dataset ID, upstream revision, split, original label, canonical label, and detector version.
-6. Report precision/recall by dataset and label; do not report only an aggregate score.
+1. 把数据下载到不会被 Agent 自动扫描或安装的独立目录。
+2. 使用项目目录中的 SHA-256 校验值验证 Release 资产。
+3. 解压时拒绝绝对路径、路径穿越、链接和设备文件，并清除可执行权限。
+4. 只通过检测器的“数据输入”接口读取文件，不要通过 Skill 加载器导入。
+5. 记录数据集 ID、上游版本、split、原始标签、规范化标签和检测器版本。
+6. 分数据集和分标签报告结果，不要只给出一个总分。
 
-For dynamic evaluation, use a disposable VM or container with no network, no host credentials, no browser profile, no Docker socket, no privileged mode, a read-only sample mount, a separate writable scratch mount, and resource/time limits.
+## 动态检测
 
-The collection pipeline did not execute downloaded content. Archive extraction rejected absolute paths, traversal paths, links, devices, and case-colliding names.
+只有在确实需要验证运行时行为时才执行样本，并至少满足以下条件：
+
+- 使用可销毁的虚拟机或容器；
+- 禁止外网访问；
+- 不挂载宿主机可写目录、Docker Socket、SSH Agent 或浏览器配置；
+- 不注入任何真实凭据；
+- 样本目录只读，临时输出目录独立；
+- 设置 CPU、内存、进程数、磁盘空间和执行超时限制；
+- 记录所有文件、进程和网络尝试，执行后销毁环境。
+
+我在收集、解压、索引、打包和验证数据时没有执行下载内容。发布归档已经检查路径穿越、绝对路径、链接、设备文件、大小写冲突和可执行权限。
 
