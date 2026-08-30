@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this catalog, cite this repository and the upstream datasets you actually evaluated."
+title: "Agent Skill Security Datasets"
+type: dataset
+authors:
+  - alias: daffnjk
+repository-code: "https://github.com/daffnjk/agent-skill-security-datasets"
+url: "https://github.com/daffnjk/agent-skill-security-datasets"
+date-released: 2026-08-31
+license: MIT
+

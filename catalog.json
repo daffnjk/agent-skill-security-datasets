@@ -1,0 +1,406 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-08-30",
+  "repository": "https://github.com/daffnjk/agent-skill-security-datasets",
+  "scope": "Publicly downloadable datasets directly relevant to malicious, suspicious, vulnerable, harmful, or runtime-adversarial Agent Skills",
+  "safety": "Defensive research only; treat every sample as untrusted data and never execute it on a host system.",
+  "datasets": [
+    {
+      "id": "malicious_skill_bench",
+      "title": "malicious_skill_bench",
+      "source": {
+        "kind": "github",
+        "url": "https://github.com/ProtectSkills/MaliciousSkillBench"
+      },
+      "upstream_revision": "893afd609be22a2dfac5a2b94bbebb4eeb99515e",
+      "snapshot_date": "2026-08-30",
+      "license": "CC-BY-4.0 for benchmark metadata; upstream terms retained for third-party artifacts",
+      "labels": [
+        "malicious",
+        "benign"
+      ],
+      "evaluation_role": "primary_static_and_package_benchmark",
+      "redistribution": "metadata_only",
+      "local_snapshot_counts": {
+        "files": 34082,
+        "bytes": 345281849,
+        "skill_entrypoints": 7526,
+        "archives": 16
+      },
+      "notes": "9,740 identities; 7,505 malicious and 2,235 benign. Source packages are included in the GitHub repository.",
+      "card": "datasets/malicious_skill_bench/DATASET_CARD.md",
+      "release": null
+    },
+    {
+      "id": "malicious_skill_bench_hf",
+      "title": "malicious_skill_bench_hf",
+      "source": {
+        "kind": "huggingface_files",
+        "url": "https://huggingface.co/datasets/ProtectSkills/MaliciousSkillBench"
+      },
+      "upstream_revision": "d4b42ce5766a6e0359c987cf59c1007cb3795a90",
+      "snapshot_date": "2026-08-30",
+      "license": "CC-BY-4.0 for benchmark metadata; upstream terms retained for third-party artifacts",
+      "labels": [
+        "malicious",
+        "benign"
+      ],
+      "evaluation_role": "frozen_static_tables_and_official_splits",
+      "redistribution": "metadata_release",
+      "local_snapshot_counts": {
+        "files": 17,
+        "bytes": 35161451,
+        "skill_entrypoints": 0,
+        "archives": 0
+      },
+      "notes": "Exact frozen text and four official evaluation protocols corresponding to the GitHub source packages.",
+      "card": "datasets/malicious_skill_bench_hf/DATASET_CARD.md",
+      "release": {
+        "tag": "malicious_skill_bench_hf-2026-08-30",
+        "asset": "malicious_skill_bench_hf-2026-08-30.tar.gz",
+        "download_url": "https://github.com/daffnjk/agent-skill-security-datasets/releases/download/malicious_skill_bench_hf-2026-08-30/malicious_skill_bench_hf-2026-08-30.tar.gz",
+        "sha256": "cbc9b52bc90876abe0a5b536f029eefdb36e4b57255666b3f5d038481b80b6b6"
+      }
+    },
+    {
+      "id": "malskillbench",
+      "title": "malskillbench",
+      "source": {
+        "kind": "github",
+        "url": "https://github.com/lxyeternal/MalSkillBench"
+      },
+      "upstream_revision": "06e083125d5ec5dd7a189dfedadfe587a70635b9",
+      "snapshot_date": "2026-08-30",
+      "license": "see upstream repository",
+      "labels": [
+        "malicious",
+        "benign"
+      ],
+      "evaluation_role": "full_package_benchmark",
+      "redistribution": "metadata_only",
+      "local_snapshot_counts": {
+        "files": 410124,
+        "bytes": 5608669262,
+        "skill_entrypoints": 8018,
+        "archives": 3
+      },
+      "notes": "3,944 malicious packages and 4,000 benign controls; generated, wild, and detector-test subsets.",
+      "card": "datasets/malskillbench/DATASET_CARD.md",
+      "release": null
+    },
+    {
+      "id": "malicious_agent_skills_bench",
+      "title": "malicious_agent_skills_bench",
+      "source": {
+        "kind": "github",
+        "url": "https://github.com/protectskills/MaliciousAgentSkillsBench"
+      },
+      "upstream_revision": "f7d28b1a9de4eb33d552529cf79d1065d765f6c3",
+      "snapshot_date": "2026-08-30",
+      "license": "MIT",
+      "labels": [
+        "safe",
+        "suspicious",
+        "malicious"
+      ],
+      "evaluation_role": "ecosystem_labels_and_verified_wild",
+      "redistribution": "full_release",
+      "local_snapshot_counts": {
+        "files": 116,
+        "bytes": 11884269,
+        "skill_entrypoints": 1,
+        "archives": 0
+      },
+      "notes": "98,380 labeled identities including 157 behaviorally confirmed malicious skills.",
+      "card": "datasets/malicious_agent_skills_bench/DATASET_CARD.md",
+      "release": {
+        "tag": "malicious_agent_skills_bench-2026-08-30",
+        "asset": "malicious_agent_skills_bench-2026-08-30.tar.gz",
+        "download_url": "https://github.com/daffnjk/agent-skill-security-datasets/releases/download/malicious_agent_skills_bench-2026-08-30/malicious_agent_skills_bench-2026-08-30.tar.gz",
+        "sha256": "fc6a587a7019e57737610f75662ac53bf74d134b070c6e8628c01e2d73b1a882"
+      }
+    },
+    {
+      "id": "overtly_malicious_skills",
+      "title": "overtly_malicious_skills",
+      "source": {
+        "kind": "github",
+        "url": "https://github.com/trailofbits/overtly-malicious-skills"
+      },
+      "upstream_revision": "4ffbf9461ef0505f9ce76a0d3694a18ec33ea531",
+      "snapshot_date": "2026-08-30",
+      "license": "repository has no general license; research fixtures retained under upstream terms",
+      "labels": [
+        "malicious"
+      ],
+      "evaluation_role": "scanner_evasion_fixtures",
+      "redistribution": "metadata_only",
+      "local_snapshot_counts": {
+        "files": 14,
+        "bytes": 770079,
+        "skill_entrypoints": 4,
+        "archives": 0
+      },
+      "notes": "Four deliberately malicious multi-file skills from Trail of Bits.",
+      "card": "datasets/overtly_malicious_skills/DATASET_CARD.md",
+      "release": null
+    },
+    {
+      "id": "agenttrap",
+      "title": "agenttrap",
+      "source": {
+        "kind": "github",
+        "url": "https://github.com/zhmzm/AgentTrap"
+      },
+      "upstream_revision": "613c37512d16a92731d6f145f67f735f1ced9d20",
+      "snapshot_date": "2026-08-30",
+      "license": "see upstream repository",
+      "labels": [
+        "malicious",
+        "benign"
+      ],
+      "evaluation_role": "runtime_benchmark",
+      "redistribution": "metadata_only",
+      "local_snapshot_counts": {
+        "files": 1900,
+        "bytes": 22702003,
+        "skill_entrypoints": 141,
+        "archives": 5
+      },
+      "notes": "141 tasks: 91 malicious and 50 benign; inert domains and mock sinks.",
+      "card": "datasets/agenttrap/DATASET_CARD.md",
+      "release": null
+    },
+    {
+      "id": "skilltrustbench",
+      "title": "skilltrustbench",
+      "source": {
+        "kind": "huggingface_files",
+        "url": "https://huggingface.co/datasets/cuhk-zhuque/SkillTrustBench"
+      },
+      "upstream_revision": "f90517b7058fdcfea89af114c069fbf973f42bc7",
+      "snapshot_date": "2026-08-30",
+      "license": "CC-BY-NC-SA-4.0",
+      "labels": [
+        "malicious",
+        "suspicious",
+        "normal"
+      ],
+      "evaluation_role": "multi_file_static_benchmark",
+      "redistribution": "conditional_release",
+      "local_snapshot_counts": {
+        "files": 37727,
+        "bytes": 341119821,
+        "skill_entrypoints": 5595,
+        "archives": 1
+      },
+      "notes": "5,520 cases and a full 80 MB archive; the fetch pipeline also creates a safely unpacked, non-executable directory tree.",
+      "card": "datasets/skilltrustbench/DATASET_CARD.md",
+      "release": {
+        "tag": "skilltrustbench-2026-08-30",
+        "asset": "skilltrustbench-2026-08-30.tar.gz",
+        "download_url": "https://github.com/daffnjk/agent-skill-security-datasets/releases/download/skilltrustbench-2026-08-30/skilltrustbench-2026-08-30.tar.gz",
+        "sha256": "a1970087675a6991788c2624eb6101b72445a7c56b3e1720bd2b97f0add6622f"
+      }
+    },
+    {
+      "id": "skillbench_1650",
+      "title": "skillbench_1650",
+      "source": {
+        "kind": "huggingface_files",
+        "url": "https://huggingface.co/datasets/zenith6888/SkillsBench-1650"
+      },
+      "upstream_revision": "68c0d4bf857f48e5fa4f3baa4613f0c0980a7fb2",
+      "snapshot_date": "2026-08-30",
+      "license": "CC-BY-4.0",
+      "labels": [
+        "malicious",
+        "benign"
+      ],
+      "evaluation_role": "risk_scoring_and_hardness_benchmark",
+      "redistribution": "full_release",
+      "local_snapshot_counts": {
+        "files": 3,
+        "bytes": 11755849,
+        "skill_entrypoints": 0,
+        "archives": 0
+      },
+      "notes": "1,500 benign and 150 synthetic malicious samples with script content and difficulty labels.",
+      "card": "datasets/skillbench_1650/DATASET_CARD.md",
+      "release": {
+        "tag": "skillbench_1650-2026-08-30",
+        "asset": "skillbench_1650-2026-08-30.tar.gz",
+        "download_url": "https://github.com/daffnjk/agent-skill-security-datasets/releases/download/skillbench_1650-2026-08-30/skillbench_1650-2026-08-30.tar.gz",
+        "sha256": "1b027da5b2f21007b8ac620532c37d598fdf73bcced1f42262efbc78da886462"
+      }
+    },
+    {
+      "id": "agent_skill_malware",
+      "title": "agent_skill_malware",
+      "source": {
+        "kind": "huggingface_files",
+        "url": "https://huggingface.co/datasets/yoonholee/agent-skill-malware"
+      },
+      "upstream_revision": "5cff435ddab2cc34261875885de9ac50d40393ec",
+      "snapshot_date": "2026-08-30",
+      "license": "MIT",
+      "labels": [
+        "malicious",
+        "benign"
+      ],
+      "evaluation_role": "real_campaign_binary_classification",
+      "redistribution": "full_release",
+      "local_snapshot_counts": {
+        "files": 2,
+        "bytes": 2389838,
+        "skill_entrypoints": 0,
+        "archives": 0
+      },
+      "notes": "347 deduplicated OpenClaw SKILL.md texts from malware campaigns and benign controls.",
+      "card": "datasets/agent_skill_malware/DATASET_CARD.md",
+      "release": {
+        "tag": "agent_skill_malware-2026-08-30",
+        "asset": "agent_skill_malware-2026-08-30.tar.gz",
+        "download_url": "https://github.com/daffnjk/agent-skill-security-datasets/releases/download/agent_skill_malware-2026-08-30/agent_skill_malware-2026-08-30.tar.gz",
+        "sha256": "d66676ce9afce9d14f9c9c715c238f66b78458cf77bc23e4f1eb75a701c61fd3"
+      }
+    },
+    {
+      "id": "atr_skill_benchmark",
+      "title": "atr_skill_benchmark",
+      "source": {
+        "kind": "huggingface_files",
+        "url": "https://huggingface.co/datasets/Agent-Threat-Rule/atr-skill-benchmark"
+      },
+      "upstream_revision": "7219b10d2ac077e3db8c87d43d653a67935cdb5d",
+      "snapshot_date": "2026-08-30",
+      "license": "MIT",
+      "labels": [
+        "malicious",
+        "benign"
+      ],
+      "evaluation_role": "precision_oriented_hard_negatives",
+      "redistribution": "full_release",
+      "local_snapshot_counts": {
+        "files": 2,
+        "bytes": 3872580,
+        "skill_entrypoints": 0,
+        "archives": 0
+      },
+      "notes": "498 samples: 32 malicious and 466 benign, including evasive hard negatives.",
+      "card": "datasets/atr_skill_benchmark/DATASET_CARD.md",
+      "release": {
+        "tag": "atr_skill_benchmark-2026-08-30",
+        "asset": "atr_skill_benchmark-2026-08-30.tar.gz",
+        "download_url": "https://github.com/daffnjk/agent-skill-security-datasets/releases/download/atr_skill_benchmark-2026-08-30/atr_skill_benchmark-2026-08-30.tar.gz",
+        "sha256": "2971c42c9d0f9d30b788cf6f9de679f8c27b4e8ff322fc67cd42de47d16b7d81"
+      }
+    },
+    {
+      "id": "skillguard_v2",
+      "title": "skillguard_v2",
+      "source": {
+        "kind": "huggingface_files",
+        "url": "https://huggingface.co/datasets/ZAHRA585/skillguard-v2-dataset"
+      },
+      "upstream_revision": "da925f6977ae4201906b441b75f9e5a0194acd76",
+      "snapshot_date": "2026-08-30",
+      "license": "Apache-2.0",
+      "labels": [
+        "attack",
+        "benign"
+      ],
+      "evaluation_role": "prompt_injection_training_adjacent",
+      "redistribution": "full_release",
+      "local_snapshot_counts": {
+        "files": 6,
+        "bytes": 72384156,
+        "skill_entrypoints": 0,
+        "archives": 0
+      },
+      "notes": "Skill-shaped and general prompt-injection text; keep separate from ground-truth malicious package evaluation.",
+      "card": "datasets/skillguard_v2/DATASET_CARD.md",
+      "release": {
+        "tag": "skillguard_v2-2026-08-30",
+        "asset": "skillguard_v2-2026-08-30.tar.gz",
+        "download_url": "https://github.com/daffnjk/agent-skill-security-datasets/releases/download/skillguard_v2-2026-08-30/skillguard_v2-2026-08-30.tar.gz",
+        "sha256": "7bf87e251d6e0a0f2763e32d40715e6624985440bf0b8bb07115cbeb74553d1a"
+      }
+    },
+    {
+      "id": "skillleakbench",
+      "title": "skillleakbench",
+      "source": {
+        "kind": "huggingface_files",
+        "url": "https://huggingface.co/datasets/AgentSkillPrivacy/SkillLeakBench"
+      },
+      "upstream_revision": "8264436a0483e2fc1aed84b80e5fde73ea52c3ca",
+      "snapshot_date": "2026-08-30",
+      "license": "MIT",
+      "labels": [
+        "vulnerable",
+        "malicious"
+      ],
+      "evaluation_role": "credential_leakage_metadata",
+      "redistribution": "full_release",
+      "local_snapshot_counts": {
+        "files": 5,
+        "bytes": 184019,
+        "skill_entrypoints": 0,
+        "archives": 0
+      },
+      "notes": "520 affected skills and 1,708 issues; de-identified metadata, not full Skill text.",
+      "card": "datasets/skillleakbench/DATASET_CARD.md",
+      "release": {
+        "tag": "skillleakbench-2026-08-30",
+        "asset": "skillleakbench-2026-08-30.tar.gz",
+        "download_url": "https://github.com/daffnjk/agent-skill-security-datasets/releases/download/skillleakbench-2026-08-30/skillleakbench-2026-08-30.tar.gz",
+        "sha256": "4f9de34d84f975582467e6707e8ee39c692cbe9f8a51f9557fd8fa3131ffb1b2"
+      }
+    },
+    {
+      "id": "skilllifebench",
+      "title": "skilllifebench",
+      "source": {
+        "kind": "huggingface_git",
+        "url": "https://huggingface.co/datasets/SkillLifeBench2026/SkillLifeBench"
+      },
+      "upstream_revision": "55fcf409d643d2740206ce4699b9a81730bce1ad",
+      "snapshot_date": "2026-08-30",
+      "license": "CC-BY-4.0",
+      "labels": [
+        "vulnerability_scenario"
+      ],
+      "evaluation_role": "lifecycle_and_vulnerability_scenarios",
+      "redistribution": "full_release",
+      "local_snapshot_counts": {
+        "files": 324,
+        "bytes": 1731026,
+        "skill_entrypoints": 0,
+        "archives": 0
+      },
+      "notes": "Structured registry, annotations, skill schemas, and implementations; useful for rule coverage rather than prevalence.",
+      "card": "datasets/skilllifebench/DATASET_CARD.md",
+      "release": {
+        "tag": "skilllifebench-2026-08-30",
+        "asset": "skilllifebench-2026-08-30.tar.gz",
+        "download_url": "https://github.com/daffnjk/agent-skill-security-datasets/releases/download/skilllifebench-2026-08-30/skilllifebench-2026-08-30.tar.gz",
+        "sha256": "c778b007894e2e4fbda2801eb9a786d9975fb12a025edbf1202089b52ae266bf"
+      }
+    }
+  ],
+  "excluded_or_deferred": [
+    {
+      "id": "harmfulskillbench",
+      "reason": "Dataset is gated on Hugging Face; code repository is public but samples require user acceptance/token."
+    },
+    {
+      "id": "skillsmetric",
+      "reason": "Paper describes 2,266 samples, but no verified public dataset repository was found in the dated search."
+    },
+    {
+      "id": "duplicate_agent_skill_malware_mirrors",
+      "reason": "Hugging Face mirrors such as TongxiQu/agent-skill-malware appear to duplicate the same 347-sample corpus."
+    }
+  ]
+}

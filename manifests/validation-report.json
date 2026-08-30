@@ -1,0 +1,149 @@
+{
+  "corpus": "local snapshot (path intentionally omitted)",
+  "source_count": 13,
+  "total_files": 484322,
+  "total_bytes": 6457906202,
+  "total_skill_entrypoints": 21285,
+  "by_source": {
+    "agent_skill_malware": {
+      "files": 2,
+      "bytes": 2389838,
+      "skill_entrypoints": 0,
+      "archives": 0
+    },
+    "agenttrap": {
+      "files": 1900,
+      "bytes": 22702003,
+      "skill_entrypoints": 141,
+      "archives": 5
+    },
+    "atr_skill_benchmark": {
+      "files": 2,
+      "bytes": 3872580,
+      "skill_entrypoints": 0,
+      "archives": 0
+    },
+    "malicious_agent_skills_bench": {
+      "files": 116,
+      "bytes": 11884269,
+      "skill_entrypoints": 1,
+      "archives": 0
+    },
+    "malicious_skill_bench": {
+      "files": 34082,
+      "bytes": 345281849,
+      "skill_entrypoints": 7526,
+      "archives": 16
+    },
+    "malicious_skill_bench_hf": {
+      "files": 17,
+      "bytes": 35161451,
+      "skill_entrypoints": 0,
+      "archives": 0
+    },
+    "malskillbench": {
+      "files": 410124,
+      "bytes": 5608669262,
+      "skill_entrypoints": 8018,
+      "archives": 3
+    },
+    "overtly_malicious_skills": {
+      "files": 14,
+      "bytes": 770079,
+      "skill_entrypoints": 4,
+      "archives": 0
+    },
+    "skillbench_1650": {
+      "files": 3,
+      "bytes": 11755849,
+      "skill_entrypoints": 0,
+      "archives": 0
+    },
+    "skillguard_v2": {
+      "files": 6,
+      "bytes": 72384156,
+      "skill_entrypoints": 0,
+      "archives": 0
+    },
+    "skillleakbench": {
+      "files": 5,
+      "bytes": 184019,
+      "skill_entrypoints": 0,
+      "archives": 0
+    },
+    "skilllifebench": {
+      "files": 324,
+      "bytes": 1731026,
+      "skill_entrypoints": 0,
+      "archives": 0
+    },
+    "skilltrustbench": {
+      "files": 37727,
+      "bytes": 341119821,
+      "skill_entrypoints": 5595,
+      "archives": 1
+    }
+  },
+  "upstream_label_counts": {
+    "malicious_skill_bench": {
+      "1": 7505,
+      "0": 2235
+    },
+    "malicious_agent_skills_bench": {
+      "suspicious": 4130,
+      "safe": 94093,
+      "malicious": 157
+    },
+    "skilltrustbench": {
+      "malicious": 2863,
+      "normal": 1643,
+      "suspicious": 1014
+    },
+    "agent_skill_malware": {
+      "malicious": 124,
+      "benign": 223
+    },
+    "atr_skill_benchmark": {
+      "benign": 466,
+      "malicious": 32
+    },
+    "skillleakbench": {
+      "malicious": 83,
+      "vulnerable": 437
+    },
+    "malskillbench": {
+      "malicious": 3944,
+      "benign": 4000
+    },
+    "agenttrap": {
+      "malicious": 91,
+      "benign": 50
+    },
+    "overtly_malicious_skills": {
+      "malicious": 4
+    },
+    "skilllifebench": {
+      "registry_records": 194
+    }
+  },
+  "safe_extraction": {
+    "archives_processed": 12,
+    "entries_seen": 87308,
+    "expanded_bytes": 517862078,
+    "case_collisions": 0
+  },
+  "checks": {
+    "inventory_matches_checksums": true,
+    "all_parquet_magic_valid": true,
+    "parquet_file_count": 16,
+    "official_split_row_counts": {
+      "m_structural_disjoint": 9740,
+      "random": 9740,
+      "source_balanced_random": 9740,
+      "source_disjoint": 9740
+    },
+    "skilltrust_zip_integrity": "passed_unzip_test",
+    "skilltrust_publisher_checksum": "mismatch_recorded",
+    "downloaded_content_executed": false
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "snapshot_date": "2026-08-30",
+  "assets": [
+    {
+      "dataset_id": "malicious_agent_skills_bench",
+      "asset": "malicious_agent_skills_bench-2026-08-30.tar.gz",
+      "bytes": 1002223,
+      "sha256": "fc6a587a7019e57737610f75662ac53bf74d134b070c6e8628c01e2d73b1a882"
+    },
+    {
+      "dataset_id": "agent_skill_malware",
+      "asset": "agent_skill_malware-2026-08-30.tar.gz",
+      "bytes": 682564,
+      "sha256": "d66676ce9afce9d14f9c9c715c238f66b78458cf77bc23e4f1eb75a701c61fd3"
+    },
+    {
+      "dataset_id": "atr_skill_benchmark",
+      "asset": "atr_skill_benchmark-2026-08-30.tar.gz",
+      "bytes": 1165313,
+      "sha256": "2971c42c9d0f9d30b788cf6f9de679f8c27b4e8ff322fc67cd42de47d16b7d81"
+    },
+    {
+      "dataset_id": "skillleakbench",
+      "asset": "skillleakbench-2026-08-30.tar.gz",
+      "bytes": 18100,
+      "sha256": "4f9de34d84f975582467e6707e8ee39c692cbe9f8a51f9557fd8fa3131ffb1b2"
+    },
+    {
+      "dataset_id": "skillguard_v2",
+      "asset": "skillguard_v2-2026-08-30.tar.gz",
+      "bytes": 64125445,
+      "sha256": "7bf87e251d6e0a0f2763e32d40715e6624985440bf0b8bb07115cbeb74553d1a"
+    },
+    {
+      "dataset_id": "skillbench_1650",
+      "asset": "skillbench_1650-2026-08-30.tar.gz",
+      "bytes": 10299692,
+      "sha256": "1b027da5b2f21007b8ac620532c37d598fdf73bcced1f42262efbc78da886462"
+    },
+    {
+      "dataset_id": "skilllifebench",
+      "asset": "skilllifebench-2026-08-30.tar.gz",
+      "bytes": 241991,
+      "sha256": "c778b007894e2e4fbda2801eb9a786d9975fb12a025edbf1202089b52ae266bf"
+    },
+    {
+      "dataset_id": "skilltrustbench",
+      "asset": "skilltrustbench-2026-08-30.tar.gz",
+      "bytes": 75613431,
+      "sha256": "a1970087675a6991788c2624eb6101b72445a7c56b3e1720bd2b97f0add6622f"
+    },
+    {
+      "dataset_id": "malicious_skill_bench_hf",
+      "asset": "malicious_skill_bench_hf-2026-08-30.tar.gz",
+      "bytes": 1833701,
+      "sha256": "cbc9b52bc90876abe0a5b536f029eefdb36e4b57255666b3f5d038481b80b6b6"
+    }
+  ]
+}
+
