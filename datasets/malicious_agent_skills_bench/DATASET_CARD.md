@@ -12,7 +12,7 @@
 - 固定版本：`f7d28b1a9de4eb33d552529cf79d1065d765f6c3`
 - 快照日期：`2026-08-30`
 - 上游许可证/条款：MIT
-- 我的许可证说明：MIT，按上游条款提供独立完整 Release。
+- 许可证说明：MIT，按上游条款提供独立完整 Release。
 - 发布策略：`full_release`（完整 Release）
 
 ## 如何用于评测
@@ -27,13 +27,13 @@
 
 ## 获取方式
 
-我已提供独立 Release：
+本项目已提供独立 Release：
 
 - Release 标签：`malicious_agent_skills_bench-2026-08-30`
 - 资产文件：`malicious_agent_skills_bench-2026-08-30.tar.gz`
 - SHA-256：`fc6a587a7019e57737610f75662ac53bf74d134b070c6e8628c01e2d73b1a882`
 
-上游许可证始终具有最终效力；我对本项目的整理不会重新授权任何第三方数据。
+上游许可证始终具有最终效力；本项目的整理不会重新授权任何第三方数据。
 
 ## 安全提醒
 

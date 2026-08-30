@@ -3,7 +3,7 @@
   "snapshot_date": "2026-08-30",
   "repository": "https://github.com/daffnjk/agent-skill-security-datasets",
   "scope": "公开可下载且与恶意、可疑、脆弱、有害或运行时对抗性 Agent Skill 直接相关的数据集",
-  "maintainer_note": "我整理这个目录是为了让恶意 Skill 检测评测更易复现；我不拥有或重新授权任何第三方数据。",
+  "maintainer_note": "本目录用于提高恶意 Skill 检测评测的可复现性；本项目不拥有或重新授权任何第三方数据。",
   "safety": "仅用于防御性研究。请把每个样本视为不可信数据，禁止在宿主系统或真实 Agent 环境中安装或执行。",
   "datasets": [
     {

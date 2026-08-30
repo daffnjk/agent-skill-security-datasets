@@ -198,13 +198,13 @@ def main() -> None:
         card_dir = ROOT / "datasets" / dataset_id
         card_dir.mkdir(parents=True, exist_ok=True)
         release_text = (
-            f"""我已提供独立 Release：
+            f"""本项目已提供独立 Release：
 
 - Release 标签：`{release['tag']}`
 - 资产文件：`{release['asset']}`
 - SHA-256：`{release['sha256']}`"""
             if release
-            else "我没有重新托管这个来源的样本。请从上游地址获取，并切换到本卡片记录的固定版本。"
+            else "本项目未重新托管这个来源的样本。请从上游地址获取，并切换到本卡片记录的固定版本。"
         )
         card = f"""# {zh['title']}
 
@@ -220,7 +220,7 @@ def main() -> None:
 - 固定版本：`{revisions[dataset_id]}`
 - 快照日期：`{SNAPSHOT}`
 - 上游许可证/条款：{source['license']}
-- 我的许可证说明：{zh['license']}
+- 许可证说明：{zh['license']}
 - 发布策略：`{policy}`（{POLICY_ZH[policy]}）
 
 ## 如何用于评测
@@ -237,7 +237,7 @@ def main() -> None:
 
 {release_text}
 
-上游许可证始终具有最终效力；我对本项目的整理不会重新授权任何第三方数据。
+上游许可证始终具有最终效力；本项目的整理不会重新授权任何第三方数据。
 
 ## 安全提醒
 
@@ -250,7 +250,7 @@ def main() -> None:
         "snapshot_date": SNAPSHOT,
         "repository": f"https://github.com/{OWNER}/{REPO}",
         "scope": "公开可下载且与恶意、可疑、脆弱、有害或运行时对抗性 Agent Skill 直接相关的数据集",
-        "maintainer_note": "我整理这个目录是为了让恶意 Skill 检测评测更易复现；我不拥有或重新授权任何第三方数据。",
+        "maintainer_note": "本目录用于提高恶意 Skill 检测评测的可复现性；本项目不拥有或重新授权任何第三方数据。",
         "safety": "仅用于防御性研究。请把每个样本视为不可信数据，禁止在宿主系统或真实 Agent 环境中安装或执行。",
         "datasets": entries,
         "excluded_or_deferred": [

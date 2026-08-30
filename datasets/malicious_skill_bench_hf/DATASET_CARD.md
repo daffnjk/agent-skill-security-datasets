@@ -12,7 +12,7 @@ MaliciousSkillBench 的冻结表格、攻击与影响分类以及四种官方数
 - 固定版本：`d4b42ce5766a6e0359c987cf59c1007cb3795a90`
 - 快照日期：`2026-08-30`
 - 上游许可证/条款：CC-BY-4.0 for benchmark metadata; upstream terms retained for third-party artifacts
-- 我的许可证说明：只发布 CC-BY-4.0 的基准元数据、分类表、清单和官方划分；排除第三方全文与包。
+- 许可证说明：只发布 CC-BY-4.0 的基准元数据、分类表、清单和官方划分；排除第三方全文与包。
 - 发布策略：`metadata_release`（仅发布基准元数据、分类和官方划分）
 
 ## 如何用于评测
@@ -27,13 +27,13 @@ MaliciousSkillBench 的冻结表格、攻击与影响分类以及四种官方数
 
 ## 获取方式
 
-我已提供独立 Release：
+本项目已提供独立 Release：
 
 - Release 标签：`malicious_skill_bench_hf-2026-08-30`
 - 资产文件：`malicious_skill_bench_hf-2026-08-30.tar.gz`
 - SHA-256：`cbc9b52bc90876abe0a5b536f029eefdb36e4b57255666b3f5d038481b80b6b6`
 
-上游许可证始终具有最终效力；我对本项目的整理不会重新授权任何第三方数据。
+上游许可证始终具有最终效力；本项目的整理不会重新授权任何第三方数据。
 
 ## 安全提醒
 
