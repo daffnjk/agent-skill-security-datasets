@@ -19,7 +19,7 @@
 以下来源未重新托管，因为在固定版本上没有发现仓库级通用许可证，或其中第三方内容需要逐项核对：
 
 - `malicious_skill_bench` 的第三方包资产
-- `malskillbench`
+- `malskillbench`：上游 README 声明仅限学术研究，未提供可支持公开再分发的仓库级通用许可证
 - `overtly_malicious_skills`
 - `agenttrap`
 

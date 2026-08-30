@@ -89,7 +89,7 @@ python3 scripts/fetch_release.py \
 | 数据集 | 来源与介绍 | 标签 / 规模 | 未重新托管的原因 |
 | --- | --- | --- | --- |
 | [`malicious_skill_bench`](datasets/malicious_skill_bench/DATASET_CARD.md) | [MaliciousSkillBench](https://github.com/ProtectSkills/MaliciousSkillBench)：静态恶意检测综合基准，包含身份、攻击分类、元数据和第三方来源包。 | 9,740 个身份：7,505 恶意、2,235 良性 | 第三方 Skill 包保留各自上游条款 |
-| [`malskillbench`](datasets/malskillbench/DATASET_CARD.md) | [MalSkillBench](https://github.com/lxyeternal/MalSkillBench)：生成、真实来源和检测器测试子集组成的完整包级基准。 | 3,944 恶意、4,000 良性 | 固定版本上未发现仓库级通用 LICENSE |
+| [`malskillbench`](datasets/malskillbench/DATASET_CARD.md) | [MalSkillBench](https://github.com/lxyeternal/MalSkillBench)：生成、真实来源和检测器测试子集组成的完整包级基准。 | 3,944 恶意、4,000 良性 | 上游 README 声明仅限学术研究，且未提供仓库级通用 LICENSE |
 | [`overtly_malicious_skills`](datasets/overtly_malicious_skills/DATASET_CARD.md) | [Overtly Malicious Skills](https://github.com/trailofbits/overtly-malicious-skills)：Trail of Bits 提供的刻意恶意多文件 Skill 固件。 | 4 个恶意 Skill | 固定版本上未提供通用 LICENSE |
 | [`agenttrap`](datasets/agenttrap/DATASET_CARD.md) | [AgentTrap](https://github.com/zhmzm/AgentTrap)：使用惰性域名和模拟接收端的运行时 Agent 安全基准。 | 141 个任务：91 恶意、50 良性 | 固定版本上未发现仓库级通用 LICENSE |
 
@@ -137,4 +137,3 @@ python3 scripts/fetch_release.py \
 - [再分发策略](docs/REDISTRIBUTION.md)
 - [第三方数据说明](THIRD_PARTY_NOTICES.md)
 - [机器可读引用信息](CITATION.cff)
-

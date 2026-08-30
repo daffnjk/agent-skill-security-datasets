@@ -81,8 +81,8 @@
       },
       "upstream_revision": "06e083125d5ec5dd7a189dfedadfe587a70635b9",
       "snapshot_date": "2026-08-30",
-      "license": "see upstream repository",
-      "license_note": "固定版本上未发现仓库级通用 LICENSE，因此本项目不重新托管样本。",
+      "license": "Academic research use only (stated in upstream README; no repository-wide license file found)",
+      "license_note": "上游 README 声明仅限学术研究，且未提供仓库级通用 LICENSE，因此本项目不重新托管样本。",
       "labels": [
         "malicious",
         "benign"

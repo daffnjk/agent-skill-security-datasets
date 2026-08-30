@@ -54,7 +54,7 @@ ZH_INFO = {
         "title": "MalSkillBench",
         "description": "完整 Skill 包级恶意检测基准，覆盖生成样本、真实来源样本和检测器测试子集，适合目录级或多文件扫描测试。",
         "role": "完整 Skill 包检测和良性误报对照",
-        "license": "固定版本上未发现仓库级通用 LICENSE，因此本项目不重新托管样本。",
+        "license": "上游 README 声明仅限学术研究，且未提供仓库级通用 LICENSE，因此本项目不重新托管样本。",
     },
     "malicious_agent_skills_bench": {
         "title": "MaliciousAgentSkillsBench",
