@@ -10,7 +10,7 @@
 
 - 上游来源：https://huggingface.co/datasets/Agent-Threat-Rule/atr-skill-benchmark
 - 固定版本：`7219b10d2ac077e3db8c87d43d653a67935cdb5d`
-- 快照日期：`2026-08-30`
+- 快照日期：`2026-08-31`
 - 上游许可证/条款：MIT
 - 许可证说明：MIT，按上游条款提供独立完整 Release。
 - 发布策略：`full_release`（完整 Release）

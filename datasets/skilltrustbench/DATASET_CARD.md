@@ -10,7 +10,7 @@
 
 - 上游来源：https://huggingface.co/datasets/cuhk-zhuque/SkillTrustBench
 - 固定版本：`f90517b7058fdcfea89af114c069fbf973f42bc7`
-- 快照日期：`2026-08-30`
+- 快照日期：`2026-08-31`
 - 上游许可证/条款：CC-BY-NC-SA-4.0
 - 许可证说明：CC-BY-NC-SA-4.0；非商业、署名和相同方式共享条件继续适用。
 - 发布策略：`conditional_release`（带许可证附加条件的独立 Release）

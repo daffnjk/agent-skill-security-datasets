@@ -10,7 +10,7 @@ Agent Skill 凭据泄露和不安全实现问题的去标识化元数据，适�
 
 - 上游来源：https://huggingface.co/datasets/AgentSkillPrivacy/SkillLeakBench
 - 固定版本：`8264436a0483e2fc1aed84b80e5fde73ea52c3ca`
-- 快照日期：`2026-08-30`
+- 快照日期：`2026-08-31`
 - 上游许可证/条款：MIT
 - 许可证说明：MIT，按上游条款提供独立完整 Release；内容主要是元数据而非 Skill 全文。
 - 发布策略：`full_release`（完整 Release）

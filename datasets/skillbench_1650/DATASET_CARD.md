@@ -10,7 +10,7 @@
 
 - 上游来源：https://huggingface.co/datasets/zenith6888/SkillsBench-1650
 - 固定版本：`68c0d4bf857f48e5fa4f3baa4613f0c0980a7fb2`
-- 快照日期：`2026-08-30`
+- 快照日期：`2026-08-31`
 - 上游许可证/条款：CC-BY-4.0
 - 许可证说明：CC-BY-4.0，按上游条款提供独立完整 Release。
 - 发布策略：`full_release`（完整 Release）

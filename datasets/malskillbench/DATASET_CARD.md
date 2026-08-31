@@ -10,7 +10,7 @@
 
 - 上游来源：https://github.com/lxyeternal/MalSkillBench
 - 固定版本：`06e083125d5ec5dd7a189dfedadfe587a70635b9`
-- 快照日期：`2026-08-30`
+- 快照日期：`2026-08-31`
 - 上游许可证/条款：Academic research use only (stated in upstream README; no repository-wide license file found)
 - 许可证说明：上游 README 声明仅限学术研究，且未提供仓库级通用 LICENSE，因此本项目不重新托管样本。
 - 发布策略：`metadata_only`（仅提供来源索引，不重新托管样本）

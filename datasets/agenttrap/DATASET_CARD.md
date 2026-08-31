@@ -10,7 +10,7 @@
 
 - 上游来源：https://github.com/zhmzm/AgentTrap
 - 固定版本：`613c37512d16a92731d6f145f67f735f1ced9d20`
-- 快照日期：`2026-08-30`
+- 快照日期：`2026-08-31`
 - 上游许可证/条款：see upstream repository
 - 许可证说明：固定版本上未发现仓库级通用 LICENSE，因此本项目不重新托管样本。
 - 发布策略：`metadata_only`（仅提供来源索引，不重新托管样本）

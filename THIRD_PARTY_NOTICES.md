@@ -22,5 +22,6 @@
 - `malskillbench`：上游 README 声明仅限学术研究，未提供可支持公开再分发的仓库级通用许可证
 - `overtly_malicious_skills`
 - `agenttrap`
+- `poisoned_skills`：上游 README 声明仅用于研究和安全评估，且未提供可支持公开再分发的仓库级通用许可证
 
 每个数据集卡片中的上游链接和许可证说明仅用于帮助使用者判断，最终以对应上游仓库的条款为准。如果这里的许可证或来源判断存在错误，请按 [`SECURITY.md`](SECURITY.md) 提交报告。

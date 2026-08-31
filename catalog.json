@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "snapshot_date": "2026-08-30",
+  "snapshot_date": "2026-08-31",
   "repository": "https://github.com/daffnjk/agent-skill-security-datasets",
   "scope": "公开可下载且与恶意、可疑、脆弱、有害或运行时对抗性 Agent Skill 直接相关的数据集",
   "maintainer_note": "本目录用于提高恶意 Skill 检测评测的可复现性；本项目不拥有或重新授权任何第三方数据。",
@@ -15,7 +15,7 @@
         "url": "https://github.com/ProtectSkills/MaliciousSkillBench"
       },
       "upstream_revision": "893afd609be22a2dfac5a2b94bbebb4eeb99515e",
-      "snapshot_date": "2026-08-30",
+      "snapshot_date": "2026-08-31",
       "license": "CC-BY-4.0 for benchmark metadata; upstream terms retained for third-party artifacts",
       "license_note": "基准元数据采用 CC-BY-4.0；第三方包继续适用各自上游条款。",
       "labels": [
@@ -45,7 +45,7 @@
         "url": "https://huggingface.co/datasets/ProtectSkills/MaliciousSkillBench"
       },
       "upstream_revision": "d4b42ce5766a6e0359c987cf59c1007cb3795a90",
-      "snapshot_date": "2026-08-30",
+      "snapshot_date": "2026-08-31",
       "license": "CC-BY-4.0 for benchmark metadata; upstream terms retained for third-party artifacts",
       "license_note": "只发布 CC-BY-4.0 的基准元数据、分类表、清单和官方划分；排除第三方全文与包。",
       "labels": [
@@ -80,7 +80,7 @@
         "url": "https://github.com/lxyeternal/MalSkillBench"
       },
       "upstream_revision": "06e083125d5ec5dd7a189dfedadfe587a70635b9",
-      "snapshot_date": "2026-08-30",
+      "snapshot_date": "2026-08-31",
       "license": "Academic research use only (stated in upstream README; no repository-wide license file found)",
       "license_note": "上游 README 声明仅限学术研究，且未提供仓库级通用 LICENSE，因此本项目不重新托管样本。",
       "labels": [
@@ -110,7 +110,7 @@
         "url": "https://github.com/protectskills/MaliciousAgentSkillsBench"
       },
       "upstream_revision": "f7d28b1a9de4eb33d552529cf79d1065d765f6c3",
-      "snapshot_date": "2026-08-30",
+      "snapshot_date": "2026-08-31",
       "license": "MIT",
       "license_note": "MIT，按上游条款提供独立完整 Release。",
       "labels": [
@@ -146,7 +146,7 @@
         "url": "https://github.com/trailofbits/overtly-malicious-skills"
       },
       "upstream_revision": "4ffbf9461ef0505f9ce76a0d3694a18ec33ea531",
-      "snapshot_date": "2026-08-30",
+      "snapshot_date": "2026-08-31",
       "license": "repository has no general license; research fixtures retained under upstream terms",
       "license_note": "固定版本上未提供通用 LICENSE，因此本项目只保留索引。",
       "labels": [
@@ -175,7 +175,7 @@
         "url": "https://github.com/zhmzm/AgentTrap"
       },
       "upstream_revision": "613c37512d16a92731d6f145f67f735f1ced9d20",
-      "snapshot_date": "2026-08-30",
+      "snapshot_date": "2026-08-31",
       "license": "see upstream repository",
       "license_note": "固定版本上未发现仓库级通用 LICENSE，因此本项目不重新托管样本。",
       "labels": [
@@ -197,6 +197,30 @@
       "release": null
     },
     {
+      "id": "poisoned_skills",
+      "title": "PoisonedSkills",
+      "description": "面向 LLM 编码 Agent Skill 供应链投毒的对抗性基准，包含规模化投毒样本、跨 Agent 运行时工具、确定性执行判定器、静态防御和完整评测日志。",
+      "source": {
+        "kind": "github",
+        "url": "https://github.com/qyb156/PoisonedSkills"
+      },
+      "upstream_revision": "5068b39ff85c5e9a3afdb856a53b85867043c923",
+      "snapshot_date": "2026-08-31",
+      "license": "Research purposes only (stated in upstream README; no repository-wide license file found)",
+      "license_note": "上游 README 声明仅用于研究和安全评估，且未提供仓库级通用 LICENSE，因此本项目只提供来源索引，不重新托管样本。",
+      "labels": [
+        "adversarial"
+      ],
+      "evaluation_role": "supply_chain_poisoning_and_runtime_execution_benchmark",
+      "evaluation_role_zh": "供应链投毒检测、运行时执行验证和静态防御评测",
+      "redistribution": "metadata_only",
+      "redistribution_zh": "仅提供来源索引，不重新托管样本",
+      "local_snapshot_counts": {},
+      "notes": "面向 LLM 编码 Agent Skill 供应链投毒的对抗性基准，包含规模化投毒样本、跨 Agent 运行时工具、确定性执行判定器、静态防御和完整评测日志。",
+      "card": "datasets/poisoned_skills/DATASET_CARD.md",
+      "release": null
+    },
+    {
       "id": "skilltrustbench",
       "title": "SkillTrustBench",
       "description": "多文件 Skill 静态安全基准，提供恶意、可疑和正常三类样本及完整归档，适合分级检测与多文件分析。",
@@ -205,7 +229,7 @@
         "url": "https://huggingface.co/datasets/cuhk-zhuque/SkillTrustBench"
       },
       "upstream_revision": "f90517b7058fdcfea89af114c069fbf973f42bc7",
-      "snapshot_date": "2026-08-30",
+      "snapshot_date": "2026-08-31",
       "license": "CC-BY-NC-SA-4.0",
       "license_note": "CC-BY-NC-SA-4.0；非商业、署名和相同方式共享条件继续适用。",
       "labels": [
@@ -241,7 +265,7 @@
         "url": "https://huggingface.co/datasets/zenith6888/SkillsBench-1650"
       },
       "upstream_revision": "68c0d4bf857f48e5fa4f3baa4613f0c0980a7fb2",
-      "snapshot_date": "2026-08-30",
+      "snapshot_date": "2026-08-31",
       "license": "CC-BY-4.0",
       "license_note": "CC-BY-4.0，按上游条款提供独立完整 Release。",
       "labels": [
@@ -276,7 +300,7 @@
         "url": "https://huggingface.co/datasets/yoonholee/agent-skill-malware"
       },
       "upstream_revision": "5cff435ddab2cc34261875885de9ac50d40393ec",
-      "snapshot_date": "2026-08-30",
+      "snapshot_date": "2026-08-31",
       "license": "MIT",
       "license_note": "MIT，按上游条款提供独立完整 Release。",
       "labels": [
@@ -311,7 +335,7 @@
         "url": "https://huggingface.co/datasets/Agent-Threat-Rule/atr-skill-benchmark"
       },
       "upstream_revision": "7219b10d2ac077e3db8c87d43d653a67935cdb5d",
-      "snapshot_date": "2026-08-30",
+      "snapshot_date": "2026-08-31",
       "license": "MIT",
       "license_note": "MIT，按上游条款提供独立完整 Release。",
       "labels": [
@@ -346,7 +370,7 @@
         "url": "https://huggingface.co/datasets/ZAHRA585/skillguard-v2-dataset"
       },
       "upstream_revision": "da925f6977ae4201906b441b75f9e5a0194acd76",
-      "snapshot_date": "2026-08-30",
+      "snapshot_date": "2026-08-31",
       "license": "Apache-2.0",
       "license_note": "Apache-2.0，按上游条款提供独立完整 Release。",
       "labels": [
@@ -381,7 +405,7 @@
         "url": "https://huggingface.co/datasets/AgentSkillPrivacy/SkillLeakBench"
       },
       "upstream_revision": "8264436a0483e2fc1aed84b80e5fde73ea52c3ca",
-      "snapshot_date": "2026-08-30",
+      "snapshot_date": "2026-08-31",
       "license": "MIT",
       "license_note": "MIT，按上游条款提供独立完整 Release；内容主要是元数据而非 Skill 全文。",
       "labels": [
@@ -416,7 +440,7 @@
         "url": "https://huggingface.co/datasets/SkillLifeBench2026/SkillLifeBench"
       },
       "upstream_revision": "55fcf409d643d2740206ce4699b9a81730bce1ad",
-      "snapshot_date": "2026-08-30",
+      "snapshot_date": "2026-08-31",
       "license": "CC-BY-4.0",
       "license_note": "CC-BY-4.0，按上游条款提供独立完整 Release。",
       "labels": [

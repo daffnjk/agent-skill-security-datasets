@@ -10,7 +10,7 @@
 
 - 上游来源：https://github.com/protectskills/MaliciousAgentSkillsBench
 - 固定版本：`f7d28b1a9de4eb33d552529cf79d1065d765f6c3`
-- 快照日期：`2026-08-30`
+- 快照日期：`2026-08-31`
 - 上游许可证/条款：MIT
 - 许可证说明：MIT，按上游条款提供独立完整 Release。
 - 发布策略：`full_release`（完整 Release）

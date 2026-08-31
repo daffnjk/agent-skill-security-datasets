@@ -10,7 +10,7 @@
 
 - 上游来源：https://huggingface.co/datasets/SkillLifeBench2026/SkillLifeBench
 - 固定版本：`55fcf409d643d2740206ce4699b9a81730bce1ad`
-- 快照日期：`2026-08-30`
+- 快照日期：`2026-08-31`
 - 上游许可证/条款：CC-BY-4.0
 - 许可证说明：CC-BY-4.0，按上游条款提供独立完整 Release。
 - 发布策略：`full_release`（完整 Release）

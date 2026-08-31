@@ -23,5 +23,6 @@ skillleakbench,malicious,malicious,credential_leakage_metadata
 skillleakbench,vulnerable,vulnerable,vulnerability_detection
 agenttrap,malicious,malicious,runtime_detection
 agenttrap,benign,benign,runtime_false_positive_control
+poisoned_skills,adversarial,malicious,supply_chain_poisoning_detection
 skilllifebench,vulnerability_scenario,vulnerable,rule_coverage
 overtly_malicious_skills,malicious,malicious,scanner_evasion

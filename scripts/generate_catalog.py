@@ -13,7 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CORPUS = ROOT.parents[1] / "datasets" / "malicious-skills-corpus"
 OWNER = "daffnjk"
 REPO = "agent-skill-security-datasets"
-SNAPSHOT = "2026-08-30"
+CATALOG_SNAPSHOT = "2026-08-31"
+RELEASE_SNAPSHOT = "2026-08-30"
 
 POLICY = {
     "malicious_skill_bench": "metadata_only",
@@ -22,6 +23,7 @@ POLICY = {
     "malicious_agent_skills_bench": "full_release",
     "overtly_malicious_skills": "metadata_only",
     "agenttrap": "metadata_only",
+    "poisoned_skills": "metadata_only",
     "skilltrustbench": "conditional_release",
     "skillbench_1650": "full_release",
     "agent_skill_malware": "full_release",
@@ -32,7 +34,7 @@ POLICY = {
 }
 
 ASSET_NAMES = {
-    dataset_id: f"{dataset_id}-{SNAPSHOT}.tar.gz"
+    dataset_id: f"{dataset_id}-{RELEASE_SNAPSHOT}.tar.gz"
     for dataset_id, policy in POLICY.items()
     if policy != "metadata_only"
 }
@@ -73,6 +75,12 @@ ZH_INFO = {
         "description": "运行时 Agent 安全基准，使用惰性域名和模拟数据接收端构造恶意及良性任务，适合隔离沙箱中的动态检测评测。",
         "role": "运行时攻击检测和动态误报对照",
         "license": "固定版本上未发现仓库级通用 LICENSE，因此本项目不重新托管样本。",
+    },
+    "poisoned_skills": {
+        "title": "PoisonedSkills",
+        "description": "面向 LLM 编码 Agent Skill 供应链投毒的对抗性基准，包含规模化投毒样本、跨 Agent 运行时工具、确定性执行判定器、静态防御和完整评测日志。",
+        "role": "供应链投毒检测、运行时执行验证和静态防御评测",
+        "license": "上游 README 声明仅用于研究和安全评估，且未提供仓库级通用 LICENSE，因此本项目只提供来源索引，不重新托管样本。",
     },
     "skilltrustbench": {
         "title": "SkillTrustBench",
@@ -142,7 +150,7 @@ def main() -> None:
     validation = json.loads((CORPUS / "VALIDATION_REPORT.json").read_text(encoding="utf-8"))
     revisions = load_revisions()
     release_manifest = json.loads(
-        (ROOT / "manifests" / f"release-assets-{SNAPSHOT}.json").read_text(encoding="utf-8")
+        (ROOT / "manifests" / f"release-assets-{RELEASE_SNAPSHOT}.json").read_text(encoding="utf-8")
     )
     release_sha = {row["dataset_id"]: row["sha256"] for row in release_manifest["assets"]}
 
@@ -164,7 +172,7 @@ def main() -> None:
         policy = POLICY[dataset_id]
         release = None
         if policy != "metadata_only":
-            tag = f"{dataset_id}-{SNAPSHOT}"
+            tag = f"{dataset_id}-{RELEASE_SNAPSHOT}"
             asset = ASSET_NAMES[dataset_id]
             release = {
                 "tag": tag,
@@ -180,7 +188,7 @@ def main() -> None:
             "description": zh["description"],
             "source": {"kind": source["kind"], "url": source_url(source)},
             "upstream_revision": revisions[dataset_id],
-            "snapshot_date": SNAPSHOT,
+            "snapshot_date": CATALOG_SNAPSHOT,
             "license": source["license"],
             "license_note": zh["license"],
             "labels": source["labels"],
@@ -218,7 +226,7 @@ def main() -> None:
 
 - 上游来源：{source_url(source)}
 - 固定版本：`{revisions[dataset_id]}`
-- 快照日期：`{SNAPSHOT}`
+- 快照日期：`{CATALOG_SNAPSHOT}`
 - 上游许可证/条款：{source['license']}
 - 许可证说明：{zh['license']}
 - 发布策略：`{policy}`（{POLICY_ZH[policy]}）
@@ -247,7 +255,7 @@ def main() -> None:
 
     catalog = {
         "schema_version": "1.0",
-        "snapshot_date": SNAPSHOT,
+        "snapshot_date": CATALOG_SNAPSHOT,
         "repository": f"https://github.com/{OWNER}/{REPO}",
         "scope": "公开可下载且与恶意、可疑、脆弱、有害或运行时对抗性 Agent Skill 直接相关的数据集",
         "maintainer_note": "本目录用于提高恶意 Skill 检测评测的可复现性；本项目不拥有或重新授权任何第三方数据。",

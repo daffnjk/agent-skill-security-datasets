@@ -10,7 +10,7 @@ Skill 形态与通用提示词注入训练辅助数据，适合补充提示词�
 
 - 上游来源：https://huggingface.co/datasets/ZAHRA585/skillguard-v2-dataset
 - 固定版本：`da925f6977ae4201906b441b75f9e5a0194acd76`
-- 快照日期：`2026-08-30`
+- 快照日期：`2026-08-31`
 - 上游许可证/条款：Apache-2.0
 - 许可证说明：Apache-2.0，按上游条款提供独立完整 Release。
 - 发布策略：`full_release`（完整 Release）

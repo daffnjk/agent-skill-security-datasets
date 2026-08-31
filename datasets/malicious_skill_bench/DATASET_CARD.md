@@ -10,7 +10,7 @@
 
 - 上游来源：https://github.com/ProtectSkills/MaliciousSkillBench
 - 固定版本：`893afd609be22a2dfac5a2b94bbebb4eeb99515e`
-- 快照日期：`2026-08-30`
+- 快照日期：`2026-08-31`
 - 上游许可证/条款：CC-BY-4.0 for benchmark metadata; upstream terms retained for third-party artifacts
 - 许可证说明：基准元数据采用 CC-BY-4.0；第三方包继续适用各自上游条款。
 - 发布策略：`metadata_only`（仅提供来源索引，不重新托管样本）

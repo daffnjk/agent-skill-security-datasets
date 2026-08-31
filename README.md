@@ -5,8 +5,8 @@
 **用于恶意、可疑、脆弱及运行时对抗性 Agent Skill 检测的可追溯评测数据集。**
 
 [![目录校验](https://github.com/daffnjk/agent-skill-security-datasets/actions/workflows/validate.yml/badge.svg)](https://github.com/daffnjk/agent-skill-security-datasets/actions/workflows/validate.yml)
-[![数据快照](https://img.shields.io/badge/数据快照-2026--08--30-0969da)](manifests/source-revisions.tsv)
-[![数据源](https://img.shields.io/badge/数据源-13-1f883d)](#数据集目录)
+[![数据快照](https://img.shields.io/badge/数据快照-2026--08--31-0969da)](manifests/source-revisions.tsv)
+[![数据源](https://img.shields.io/badge/数据源-14-1f883d)](#数据集目录)
 [![Release](https://img.shields.io/badge/Release-9-8250df)](https://github.com/daffnjk/agent-skill-security-datasets/releases)
 [![项目说明](https://img.shields.io/badge/项目说明-MIT-f0b429)](LICENSE)
 
@@ -16,14 +16,14 @@
 
 本项目整理公开可获取的 Agent Skill 安全数据集，为检测器测试提供统一入口。每个数据源都记录了上游地址、固定版本、原始标签、适用场景、分发边界和 SHA-256，避免在评测时混淆来源或标签语义。
 
-当前快照包含 **13 个数据源**。其中 9 个许可边界明确的数据源提供独立 GitHub Release，4 个许可或第三方再分发边界不清的来源仅提供索引。原始大规模样本不会写入 Git 历史。
+当前快照包含 **14 个数据源**。其中 9 个许可边界明确的数据源提供独立 GitHub Release，5 个许可或第三方再分发边界不清的来源仅提供索引。原始大规模样本不会写入 Git 历史。
 
 > [!CAUTION]
 > 数据中可能包含提示词注入、恶意指令、危险代码、凭据引用或外部网络地址。所有样本都必须作为不可信数据处理：不要安装、导入或直接执行，不要提供凭据、网络权限或生产环境访问能力。
 
 ## 项目特点
 
-- **来源可追溯**：固定 13 个上游版本，保留来源链接和快照时间。
+- **来源可追溯**：固定 14 个上游版本，保留来源链接和快照时间。
 - **数据集相互隔离**：每个来源使用独立卡片和 Release，不混合许可证与标签。
 - **标签可复现**：保留上游标签，并提供统一的 [`label-map.csv`](manifests/label-map.csv)。
 - **下载可验证**：所有托管资产都提供 SHA-256，GitHub 服务端摘要与本地清单一致。
@@ -67,6 +67,7 @@ python3 scripts/fetch_release.py \
 | 凭据泄露与脆弱实现 | [`skillleakbench`](datasets/skillleakbench/DATASET_CARD.md) | 以去标识化问题元数据为主 |
 | 生命周期漏洞场景 | [`skilllifebench`](datasets/skilllifebench/DATASET_CARD.md) | 适合规则覆盖率测试 |
 | 运行时攻击检测 | [`agenttrap`](datasets/agenttrap/DATASET_CARD.md) | 仅提供索引；动态测试必须在隔离环境中进行 |
+| 供应链投毒与执行验证 | [`poisoned_skills`](datasets/poisoned_skills/DATASET_CARD.md) | 1,070 个对抗性 Skill；仅提供索引，动态测试必须在隔离环境中进行 |
 
 ## 数据集目录
 
@@ -92,6 +93,7 @@ python3 scripts/fetch_release.py \
 | [`malskillbench`](datasets/malskillbench/DATASET_CARD.md) | [MalSkillBench](https://github.com/lxyeternal/MalSkillBench)：生成、真实来源和检测器测试子集组成的完整包级基准。 | 3,944 恶意、4,000 良性 | 上游 README 声明仅限学术研究，且未提供仓库级通用 LICENSE |
 | [`overtly_malicious_skills`](datasets/overtly_malicious_skills/DATASET_CARD.md) | [Overtly Malicious Skills](https://github.com/trailofbits/overtly-malicious-skills)：Trail of Bits 提供的刻意恶意多文件 Skill 固件。 | 4 个恶意 Skill | 固定版本上未提供通用 LICENSE |
 | [`agenttrap`](datasets/agenttrap/DATASET_CARD.md) | [AgentTrap](https://github.com/zhmzm/AgentTrap)：使用惰性域名和模拟接收端的运行时 Agent 安全基准。 | 141 个任务：91 恶意、50 良性 | 固定版本上未发现仓库级通用 LICENSE |
+| [`poisoned_skills`](datasets/poisoned_skills/DATASET_CARD.md) | [PoisonedSkills](https://github.com/qyb156/PoisonedSkills)：面向编码 Agent Skill 供应链投毒的对抗性基准，包含跨 Agent 测试工具、执行判定器和静态防御。 | 1,070 个对抗性 Skill；81 个种子；15 个 MITRE ATT&CK 类别 | 上游 README 限定研究和安全评估用途，且未提供仓库级通用 LICENSE |
 
 仅索引的数据集应从上游获取，并切换到 [`source-revisions.tsv`](manifests/source-revisions.tsv) 中记录的固定提交。
 

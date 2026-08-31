@@ -10,7 +10,7 @@ Trail of Bits 提供的少量、刻意设计为恶意的多文件 Skill 固件�
 
 - 上游来源：https://github.com/trailofbits/overtly-malicious-skills
 - 固定版本：`4ffbf9461ef0505f9ce76a0d3694a18ec33ea531`
-- 快照日期：`2026-08-30`
+- 快照日期：`2026-08-31`
 - 上游许可证/条款：repository has no general license; research fixtures retained under upstream terms
 - 许可证说明：固定版本上未提供通用 LICENSE，因此本项目只保留索引。
 - 发布策略：`metadata_only`（仅提供来源索引，不重新托管样本）

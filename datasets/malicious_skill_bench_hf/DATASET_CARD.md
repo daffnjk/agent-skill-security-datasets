@@ -10,7 +10,7 @@ MaliciousSkillBench 的冻结表格、攻击与影响分类以及四种官方数
 
 - 上游来源：https://huggingface.co/datasets/ProtectSkills/MaliciousSkillBench
 - 固定版本：`d4b42ce5766a6e0359c987cf59c1007cb3795a90`
-- 快照日期：`2026-08-30`
+- 快照日期：`2026-08-31`
 - 上游许可证/条款：CC-BY-4.0 for benchmark metadata; upstream terms retained for third-party artifacts
 - 许可证说明：只发布 CC-BY-4.0 的基准元数据、分类表、清单和官方划分；排除第三方全文与包。
 - 发布策略：`metadata_release`（仅发布基准元数据、分类和官方划分）
